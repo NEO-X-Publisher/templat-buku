@@ -1,0 +1,88 @@
+= Book Title
+Dr. Bambang Purnomosidi D. P. <bambangpdp@gmail.com>
+v0.0.1-rev-{localdatetime}
+:doctype: book
+:toc:
+:toc-title: Table of Contents
+:table-caption: Table
+:source-highlighter: rouge
+// style:
+// https://github.com/rouge-ruby/rouge/tree/HEAD/lib/rouge/themes
+:rouge-style: igor_pro
+:sectnums:
+:description: This template is only a template. This template is only a template. \
+              This template is only a template. This template is only a template. \
+              This template is only a template. This template is only a template.
+:sourcedir: src
+:includedir: contents
+:imagesdir: images/book-contents
+// below is used to save generated image from asciidoctor-diagram
+:imagesoutdir: images/cache
+:chapter-signifier: Chapter
+:figure-caption: Figure 
+:icons: font
+// default: Appendix, this one is used to change into "Supplement"
+:appendix-caption: Supplement
+
+:listing-caption: Code
+
+:xrefstyle: short 
+
+:sectnums!:
+== List of figures
+list-of::image[]
+<<<
+
+== List of tables
+list-of::table[]
+<<<
+
+== List of code snippets
+list-of::listing[]
+<<<
+:sectnums:
+
+[preface]
+= Preface 
+
+Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book.  Some text to describe preface of the book. Some text to describe preface of the book.
+
+= Part I: Title of Part I
+
+[partintro]
+--
+Describe part I of the book briefly here.
+--
+
+include::{includedir}/01-01-title.adoc[]
+
+include::{includedir}/01-02-title.adoc[]
+
+= Part II: Title of Part II
+
+[partintro]
+--
+Describe part II of the book briefly here.
+--
+
+include::{includedir}/02-01-title.adoc[]
+
+include::{includedir}/02-02-title.adoc[]
+
+[bibliography]
+include::{includedir}/additional-00-bibliography.adoc[]
+
+[appendix]
+include::{includedir}/additional-01-appendix.adoc[]
+
+[appendix]
+include::{includedir}/additional-02-appendix.adoc[]
+
+[glossary]
+= Glossary
+
+[glossary]
+include::{includedir}/additional-03-glossary.adoc[]
+
+[index]
+== Index
