@@ -1,0 +1,9 @@
+= Lampiran I
+
+=== Bagian 1 dari Lampiran I
+
+Contoh lampiran bagian 1 dari lampiran I 
+
+=== Bagian 2 dari Lampiran I 
+
+Contoh lampiran bagian 2 dari lampiran I

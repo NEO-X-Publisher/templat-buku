@@ -1,8 +1,8 @@
-== Another Chapter
+== Bab Berikutnya
 
-=== Sub Section 1
+=== Sub Bab 1
 
-.First table
+.Tabel Pertama
 |===
 |Column 1, Header Row |Column 2, Header Row
 

@@ -1,3 +1,0 @@
-terminology 1:: terminology no 1 is an example of glossary
-terminology 2::
-  terminology no 2 is an example of glossary

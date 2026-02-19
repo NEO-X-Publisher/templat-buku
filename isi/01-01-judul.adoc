@@ -1,0 +1,25 @@
+== Judul Bab
+
+=== Sub Bab 1
+
+Ini sekedar kalimat, anggap saja bagian ini dikutip dari <<PragProg1999>>. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat.
+
+Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Tentu saja, jangan pernah lupakan buku Rust <<RustBook2023>>.
+
+=== Sub Bab 2
+
+Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat. Ini sekedar kalimat.
+
+Gambar bisa dilihat di <<gbr-01-01-01>>.
+
+[[gbr-01-01-01]]
+.Situs Web Rust
+[link=https://www.rust-lang.org]
+image::01-01/01-01.png[]
+
+[IMPORTANT]
+.Contoh Admonium - Penting
+====
+Ini baris 1
+Ini baris 2
+====

@@ -1,16 +1,16 @@
-# Book Template - AsciiDoc Version
+# Templat Buku - Versi AsciiDoc
 
-This book serves as a book template. To create a book, just clone this repo and start writing using [AsciiDoc](https://asciidoc.org/). Do note that this template uses Ruby version - [Asciidoctor](https://asciidoctor.org/). 
+Buku ini berfungsi sebagai templat buku. Untuk membuat buku, cukup *clone* repositori ini dan mulai menulis menggunakan [AsciiDoc](https://asciidoc.org/). Perlu diperhatikan bahwa templat ini menggunakan versi Ruby - [Asciidoctor](https://asciidoctor.org/).
 
-## Tools
+## Kakas
 
-This template just need Ruby, Asciidoctor, and `asciidoctor-pdf` and some extensions. Do this to install them (you should [install Ruby first](https://www.ruby-lang.org/en/downloads/)):
+Templat ini hanya membutuhkan Ruby, Asciidoctor, dan `asciidoctor-pdf` serta beberapa ekstensi. Lakukan ini untuk menginstalnya (Anda harus [menginstal Ruby terlebih dahulu](https://www.ruby-lang.org/en/downloads/)):
 
 ```
 $ gem install --user-install asciidoctor asciidoctor-pdf asciidoctor-bibliography asciidoctor-bibtex asciidoctor-diagram asciidoctor-rouge asciidoctor-epub3 asciidoctor-lists asciidoctor-diagram-batik asciidoctor-diagram-ditaamini asciidoctor-diagram-plantuml
 ```
 
-Currently, this template uses:
+Saat ini, templat ini menggunakan:
 
 ```bash
 $ gem list --local | grep asciidoctor
@@ -28,7 +28,7 @@ asciidoctor-rouge (0.4.0)
 $
 ```
 
-You may as well install other Asciidoctor extensions. Search rubygems for `asciidoctor-` or `asciiidoctor_`  or `_asciidoctor`:
+Anda juga dapat menginstal ekstensi Asciidoctor lainnya. Cari rubygems untuk `asciidoctor-` atau `asciiidoctor_` atau `_asciidoctor`:
 
 ```bash
 $ gem search -d asciidoctor
@@ -48,131 +48,132 @@ asciidoctor-anywhere-footnote (1.0.3)
 ```
 
 
-## Compiling to PDF
+## Kompilasi ke PDF
 
-Use `Makefile`. The result will be in [build](build/) directory. I also made an example of diagram (as code - using [ditaa](https://github.com/pepijnve/ditaa)) but this is purely optional. Please read [Makefile](Makefile) first. If you don't require diagram you don't need to use `-r asciidoctor-diagram` in the Makefile and bypass the diagram example below.
+Gunakan `Makefile`. Hasilnya akan berada di direktori [hasil](hasil/). Jika ingin menggunakan diagram, saya juga membuat contoh diagram (sebagai kode - menggunakan [ditaa](https://github.com/pepijnve/ditaa)) tetapi ini sepenuhnya opsional. Sila baca [Makefile](Makefile) terlebih dahulu. Jika Anda tidak memerlukan diagram, Anda tidak perlu menggunakan `-r asciidoctor-diagram` di Makefile dan lewati contoh diagram di bawah ini.
 
 ```bash
 $ make
 ```
 
-## Using This Template
+## Menggunakan Template Ini
 
-### Contents
+### Isi / Konten
 
-All contents are in [contents](contents/). You have to sync all those filenames in that directory with `book-title.adoc`. 
+Semua konten berada di [isi](isi/). Anda harus menyinkronkan semua nama file di direktori tersebut dengan `judul-buku.adoc`.
 
-### Images
+### Gambar
 
-* All images reside in [images](images/). Of course you are free to arrange how to put the images inside, for example you may use `xx` directory where `xx` is *chapter*. For example, if you have image in chapter 01 - named `myImage.png`, then put `myImage.png` inside `ch01` directory inside `images`.
-* In Asciidoc document, use this source code:
+* Semua gambar berada di [gambar](gambar/). Tentu saja Anda bebas mengatur cara menempatkan gambar di dalamnya, misalnya Anda dapat menggunakan direktori `xx-yy` dengan `xx` adalah *bagian* dan `yy` adalah *bab* (01-01). Misalnya, jika Anda memiliki gambar di bagian I dan bab 01 - bernama `01-01.png`, maka letakkan `01-01.png` di dalam direktori `01-01` di dalam `gambar`. Lihat isi direktori [gambar](gambar/) untuk contoh.
+
+* Dalam dokumen Asciidoc, gunakan kode sumber ini:
 
 ```asciidoc
-[[img-ch01-01]]
-.Caption of the Image
+[[gambar-bagian-I-bab-01-01]]
+.Judul Gambar
 [link=https://www.onlywhenyouneedto.org]
-image::ch01/myImage.png[]
+image::01-01/01-01.png[]
 ```
 
-* If you want to make a link - *cross reference* which refers to the image:
+* Jika Anda ingin membuat tautan - *referensi silang* yang merujuk ke gambar:
 
 ```asciidoc
-... lorem sum dolor lorem sum dolor lorem sum dolor <<img-ch01-01>> ...
+... lorem sum dolor lorem sum dolor lorem sum dolor <<gambar-bagian-I-bab-01-01>> ...
 ```
 
-You may also change the top directory name for *images* in `book-title.adoc` description:
+Anda juga dapat mengubah nama direktori teratas untuk *gambar* dalam deskripsi `judul-buku.adoc`:
 
 ```
-:imagesdir: images
+:imagesdir: gambar/isi-buku
 ```
 
-For reference style, check [Cross Reference Text and Styles](https://docs.asciidoctor.org/asciidoc/latest/macros/xref-text-and-style/). In this book template, we use:
+Untuk gaya referensi, sila melihat pada manual tentang [Teks dan Gaya Referensi Silang](https://docs.asciidoctor.org/asciidoc/latest/macros/xref-text-and-style/). Dalam templat buku ini, kami menggunakan:
 
 ```
 :xrefstyle: short
 ```
 
-Therefore, reference in document will show something like `Figure 1`. You may also use `full` (for figure number and caption), or `basic` (for just the caption - this is the default). 
+Oleh karena itu, referensi dalam dokumen akan menampilkan sesuatu seperti `Gambar 1`. Anda juga dapat menggunakan `full` (untuk nomor gambar dan keterangan), atau `basic` (hanya untuk keterangan - default).
 
-### Source Code
+### Kode Sumber
 
-* Put source code inside [src](src/). Also, you may manage whatever you like with how you put your source code (or maybe also depends on programming language that you use. for example in Rust you use `src/main.rs` inside a project, or in Java you use `src/main/java/package/App.java`. It's better if you put chapter number like `ch01` for chapter 01.
-* Ruby uses its own gem for syntax highlighting. This template uses **Rouge**, so you have to install it first using: `gem install rouge --user-install`.
-* In asciidoc, use this source code (example in Rust - `ferris` is project name inside chapter 01):
+* Letakkan kode sumber di dalam direktori [kode-sumber](kode-sumber/). Selain itu, Anda dapat mengatur apa pun yang Anda suka dengan cara Anda meletakkan kode sumber Anda (atau mungkin juga tergantung pada bahasa pemrograman yang Anda gunakan. Misalnya, di Rust Anda menggunakan `src/main.rs` di dalam proyek, atau di Java Anda menggunakan `src/main/java/package/App.java`. Lebih baik jika Anda meletakkan nomor bagian dan bab seperti pola pada gambar `01-02` untuk bagian I dan bab 02.
+* Ruby menggunakan gem-nya sendiri untuk *syntax highlighting*. Templat ini menggunakan **Rouge**, jadi Anda harus menginstalnya terlebih dahulu menggunakan: `gem install rouge --user-install`.
+* Dalam asciidoc, gunakan kode sumber ini (contoh di Rust - `hello-plain` adalah nama proyek di dalam bagian I - bab 02):
 
 ```
 [source,rust,linenums]
 ----
-include::../{sourcedir}/ch01/ferris/src/main.rs[]
+include::../{sourcedir}/01-02/hello-plain/hello.rs[]
 ----
-<1> Explanation - callout for number 1
-<2> Explanation - callout  for number 2
-```
-
-Again, you may also change the top directory name for *source code* in `book-title.adoc` description:
+<1> Penjelasan - keterangan untuk nomor 1
+<2> Penjelasan - keterangan Untuk nomor 2
 
 ```
-:sourcedir: src
+
+Sekali lagi, Anda juga dapat mengubah nama direktori teratas untuk *kode sumber* dalam deskripsi `judul-buku.adoc`:
+
+```
+:sourcedir: kode-sumber
 ```
 
-**Note**: remove **linenums** in **[source,rust,linenums]** if you don't want to use line numbering in source code.
+**Catatan**: hapus **linenums** di **[source,rust,linenums]** jika Anda tidak ingin menggunakan penomoran baris dalam kode sumber.
 
-### Bibliography
+### Bibliografi
 
-See [example of bibliography file](contents/additional-00-bibliography.adoc):
+Lihat [contoh file bibliografi](isi/tambahan-00-bibliografi.adoc):
 
 ```asciidoc
-== References
+== Referensi
 
 * [[[PragProg1999]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer: From Journeyman to Master. Addison-Wesley. 1999.
 * [[[RustBook2023]]] Steve Klabnik and Carol Nichols. The Rust programming language. No Starch Press, 2023.
 ```
 
-Inside `book-title.adoc`, put the filename:
+Di dalam `judul-buku.adoc`, letakkan nama file:
 
 ```asciidoc
 [bibliography]
-include::{includedir}/additional-00-bibliography.adoc[]
+include::{includedir}/tambahan-00-bibliografi.adoc[]
 ```
 
-In document where we want to cite the reference (see the mark on the References above, should be the same with the citation):
+
+Dalam dokumen tempat kita ingin mengutip referensi (lihat tanda pada Referensi di atas, harus sama dengan kutipan):
 
 ```asciidoc
 ...
-... let's pretend that this part is cited from <<PragProg1999>>. ...
+... anggap saja bagian ini dikutip dari <<PragProg1999>>. ...
 ...
-... Of course, never let the Rust book left behind <<RustBook2023>>....
+... Tentu saja, jangan pernah lupakan buku Rust <<RustBook2023>>....
 ...
 ```
 
-Result in document:
+Hasil dalam dokumen:
 
-![Result of index in Index page](images/non-book-contents/bib-inside-document.png)
+![Hasil indeks di halaman Indeks](gambar/bukan-isi-buku/bib-inside-document.png)
 
-Result in **References**:
+Hasil di **Referensi**:
 
-![Result in References](images/non-book-contents/bib-result-page.png)
+![Hasil di Referensi](gambar/bukan-isi-buku/bib-result-page.png)
 
 ### Diagram
 
-Asciidoctor has an extension if we want to make a diagram using textual description (so-called *diagram as code*). To use this feature, install asciidoctor-diagram first. Do this if you haven't install it:
+Asciidoctor memiliki ekstensi jika kita ingin membuat diagram menggunakan deskripsi tekstual (disebut *diagram sebagai kode*). Untuk menggunakan fitur ini, instal asciidoctor-diagram terlebih dahulu. Lakukan ini jika Anda belum menginstalnya:
 
 ```
 $ gem install --user-install asciidoctor-diagram
 ```
 
-Example of source code:
+Contoh kode sumber:
 
-[contents/01-02-title.adoc](contents/01-02-title.adoc)
+[isi/01-02-judul.adoc](isi/01-02-judul.adoc)
 
 ```bash
-=== Rust Compilation Process
+((Proses Kompilasi Rust)) bisa dilihat di <<#gbr-01-01-02>>.
 
-The process can be seen at <<#img-ch01-02-compile-process>>.
-
-[#img-ch01-02-compile-process]
-.Rust Compilation Process
-[ditaa, target="rust-compilation-process"]
+[#gbr-01-01-02]
+.Proses Kompilasi Rust
+[ditaa, target="proses-kompilasi-rust"]
 ----
  +--------+             +---------+   +--------------+   +----------+   +------------+
  |        |             | Lexing  |   |              |   |          |   |            |
@@ -183,141 +184,142 @@ The process can be seen at <<#img-ch01-02-compile-process>>.
 ----
 ```
 
-The result will be generated on-the-fly (filename will be the same as defined in `target` + .png). The image will be generated and saved at the location which has been defined in `book-title.adoc`. In this case, the location is:
+File gambar akan dihasilkan secara langsung (nama file akan sama dengan yang didefinisikan dalam `target` + .png). Gambar akan dihasilkan dan disimpan di lokasi yang telah didefinisikan dalam `judul-buku.adoc`. Dalam kasus ini, lokasinya adalah:
 
 ```asciidoc
-:imagesoutdir: images/cache
+:imagesoutdir: gambar/cache
 ```
 
-The result is:
+Hasilnya adalah:
 
-[images/cache/rust-compilation-process.png](images/cache/rust-compilation-process.png)
+[gambar/cache/proses-kompilasi-rust.png](gambar/cache/proses-kompilasi-rust.png)
 
 ```bash
 bpdp@Neo-X$ ls -la images/cache/
 total 12
-drwxr-xr-x 2 bpdp bpdp   42 Dec 25 05:35 .
-drwxr-xr-x 5 bpdp bpdp   82 Dec 25 05:35 ..
--rw-r--r-- 1 bpdp bpdp 9288 Dec 25 05:35 rust-compilation-process.png
-bpdp@Neo-X$ 
+drwxr-xr-x 2 bpdp bpdp 42 Dec 25 05:35 .
+
+drwxr-xr-x 5 bpdp bpdp 82 Dec 25 05:35 ..
+-rw-r--r-- 1 bpdp bpdp 9288 Dec 25 05:35 proses-kompilasi-rust.png
+bpdp@Neo-X$
 $
 ```
 
-![Result of Diagram with ditaa](images/non-book-contents/result-diagram.png)
+![Hasil Diagram dengan ditaa](gambar/bukan-isi-buku/result-diagram.png)
 
-See also [the manual](https://docs.asciidoctor.org/diagram-extension/latest/)
+Lihat juga [manualnya](https://docs.asciidoctor.org/diagram-extension/latest/)
 
-### Appendix
+### Lampiran
 
-Put these (I made 2 examples of appendices) at the end of `book-title.adoc`. Put appendix inside the files which has been described at `book-title.adoc`
+Letakkan ini (ada 2 contoh lampiran) di akhir `judul-buku.adoc`. Letakkan lampiran di dalam file yang telah dijelaskan di `judul-buku.adoc`
 
 ```asciidoc
 [appendix]
-include::{includedir}/03-01-appendix.adoc[]
+include::{includedir}/tambahan-01-lampiran.adoc[]
 
 [appendix]
-include::{includedir}/03-02-appendix.adoc[]
+include::{includedir}/tambahan-02-lampiran.adoc[]
 ```
 
-And here's an example of appendix:
+Berikut ini adalah contoh lampiran:
 
 ```asciidoc
-= First Appendix
+= Lampiran I
 
-=== Part 1 of first appendix
+=== Bagian 1 dari Lampiran I
 
-This is just an example of first - first appendix.
+Contoh lampiran bagian 1 dari lampiran I
 
-=== Part 2 of first appendix
+=== Bagian 2 dari Lampiran I
 
-And this on is an example of second - first appendix.
+Contoh lampiran bagian 2 dari lampiran I
 ```
 
-See also [03-02-appendix.adoc](contents/03-02-appendix.adoc)
+Lihat juga [tambahan-01-lampiran.adoc](isi/tambahan-01-lampiran.adoc)
 
-### Glossary
+### Glosarium
 
-Put this at the end of `book-title.adoc`. Put glossary inside the file which has been described at `book-title.adoc`
+Letakkan ini di akhir `judul-buku.adoc`. Masukkan glosarium ke dalam file yang telah dijelaskan di `judul-buku.adoc`
 
 ```asciidoc
 [glossary]
-= Glossary
+= Glosarium
 
 [glossary]
-include::{includedir}/additional-03-glossary.adoc[]
+include::{includedir}/tambahan-03-glosarium.adoc[]
 ```
 
-And here's an example of glossary:
+Berikut adalah contoh glosarium:
 
 ```asciidoc
-terminology 1:: terminology no 1 is an example of glossary
-terminology 2::
-  terminology no 2 is an example of glossary
+terminologi 1:: terminologi no 1 adalah contoh glosarium
+terminologi 2::
+  terminologi no 2 adalah contoh glosarium
 ```
 
-### Index
+### Indeks
 
-If you want to create index, make sure that your build destination file is PDF (asciidoctor-pdf) since Asciidoctor will not produce index for HTML5 output. Basically, what you will do is:
+Untuk membuat indeks, pastikan file tujuan hasil adalah PDF (asciidoctor-pdf) karena Asciidoctor tidak akan menghasilkan indeks untuk output HTML5. Pada dasarnya, yang akan dilakukan adalah:
 
-1.  Define index at any source Asciidoctor document.
-2.  Define where Asciidoctor should print the index in your main file.
+1. Definisikan indeks pada dokumen Asciidoctor.
+2. Definisikan di mana Asciidoctor harus mencetak indeks di file utama.
 
-To define index in any source Asciidoctor document:
+Untuk mendefinisikan indeks dalam dokumen Asciidoctor:
 
-[See source file](contents/01-02-title.adoc)
+[Lihat file kode sumber](isi/01-02-judul.adoc)
 
 ```asciidoc
 ...
 ...
 ...
-In this chapter, I will give you an example of how to format source code (((source code, formatting, callout))) using AsciiDoctor.
+Dalam bab ini, saya akan memberikan contoh cara memformat kode sumber (((kode sumber, pemformatan, keterangan))) menggunakan AsciiDoctor.
 ...
 ...
 ...
-For any other source which doesn't relate to source code in programming language, use this: (((source code, formatting, shell display)))
+Untuk sumber lain yang tidak berkaitan dengan kode sumber dalam bahasa pemrograman, gunakan ini: (((kode sumber, pemformatan, tampilan shell)))
 ...
 ...
 ...
-((Rust compilation process)) can be seen at <<#img-ch01-02-compile-process>>.
+((Proses kompilasi Rust)) bisa dilihat di <<#gbr-01-01-02>>.
 ...
 ...
 ...
 ```
 
-To define where Index will be printed, put this inside `book-title.adoc``:
+Untuk menentukan di mana Indeks akan dicetak, masukkan ini di dalam `judul-buku.adoc``:
 
 ```asciidoc
 [index]
-== Index
+== Indeks
 ```
 
-The resulting document will be clean (no sign of index) but whenever reader click the page on the index result page, pointer will be directed to that page. The clean document:
+Dokumen yang dihasilkan akan bersih (tidak ada tanda indeks) tetapi setiap kali pembaca mengklik halaman pada halaman hasil indeks, penunjuk akan diarahkan ke halaman tersebut. Dokumen bersih:
 
-![Result of index in document](images/non-book-contents/index-result-in-document.png)
+![Hasil indeks dalam dokumen](gambar/bukan-isi-buku/index-result-in-document.png)
 
-The index result page:
+Halaman hasil indeks:
 
-![Result of index in Index page](images/non-book-contents/index-result-in-index-page.png)
+![Hasil indeks di halaman Indeks](gambar/bukan-isi-buku/index-result-in-index-page.png)
 
-## Lists
+## Daftar
 
-This template uses [asciidoctor-lists](https://github.com/Alwinator/asciidoctor-lists) for list of figures, tables, and source codes. Snippet from [book-title.adoc](book-title.adoc):
+Templat ini menggunakan [asciidoctor-lists](https://github.com/Alwinator/asciidoctor-lists) untuk daftar gambar, tabel, dan kode sumber. Cuplikan dari [judul-buku.adoc](judul-buku.adoc):
 
 ```asciidoc
 ...
 ...
-:listing-caption: Code
+:listing-caption: Kode Sumber
 
 :sectnums!:
-== List of figures
+== Daftar Gambar
 list-of::image[]
 <<<
 
-== List of tables
+== Daftar Tabel
 list-of::table[]
 <<<
 
-== List of code snippets
+== Daftar Kode Sumber
 list-of::listing[]
 <<<
 :sectnums:
@@ -325,35 +327,38 @@ list-of::listing[]
 ...
 ```
 
-`:sectnums!` is used to turn off section number (since it should not be a part of contents). `<<<` is used for page break. Also see [theme description](resources/themes/neo-x-theme.yaml) to understand page numbering between front cover and contents of the book. Take a look at this snippet:
+`:sectnums!` digunakan untuk menonaktifkan nomor bagian (karena seharusnya bukan bagian dari isi). `<<<` digunakan untuk pemisah halaman. Lihat juga [contoh deskripsi tema](sumber-daya/tema/tema-neo-x.yaml) untuk memahami penomoran halaman antara sampul depan dan isi buku. Perhatikan cuplikan ini:
 
 ```yaml
 ...
 ...
 page:
-  layout: portrait
-  margin: [0.75in, 1in, 0.75in, 1in]
-  size: Letter
-  numbering:
-    start-at: 5
+layout: portrait
+margin: [0.75in, 1in, 0.75in, 1in]
+size: Letter
+numbering:
+start-at: 5
 ...
 ...
 ```
 
-We will use normal numbering, started from page 5 (after table of contents and lists). You may need to adjust this number once you finish compilation process (check the page number which mark the end of front page and adjust accordingly). See [the manual](https://docs.asciidoctor.org/pdf-converter/latest/theme/page-numbers/).
+Kita akan menggunakan penomoran normal, dimulai dari halaman 5 (setelah daftar isi dan daftar). Anda mungkin perlu menyesuaikan nomor ini setelah Anda menyelesaikan proses kompilasi (periksa nomor halaman yang menandai akhir halaman depan dan sesuaikan). Lihat [manual](https://docs.asciidoctor.org/pdf-converter/latest/theme/page-numbers/).
 
-## More
+## Lebih Lanjut
 
-If you want to change the layout (fonts, logo, etc):
+Jika ingin mengubah tata letak (font, logo, dll):
 
-1. See `Makefile` for command line / shell command to build pdf file. It uses pdf-theme.
-2. The theme resides in `resources/themes/` and uses this filename pattern (see also `Makefile`):
+1. Lihat `Makefile` sebagai referensi perintah shell yang digunakan untuk membuat file pdf. Parameter yang digunakan antara lain adalah `pdf-theme`.
+2. Tema berada di `sumber-data/tema/` dan menggunakan pola nama file ini (lihat juga `Makefile`):
 
-        *pdf-theme-name-at-Makefile*-theme.yml
+*nama-tema-pdf-di-Makefile*-theme.yml
 
-3. See https://docs.asciidoctor.org/pdf-converter/latest/theme/ for more information on creating your own theme.
+Contoh: 
 
-## License
+*neo-x*-theme.yaml
 
-This template has [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0), however you are free to choose any license for your book.
+3. Lihat [manual pembuatan tema](https://docs.asciidoctor.org/pdf-converter/latest/theme/) untuk informasi lebih lanjut tentang membuat tema Anda sendiri.
 
+## Lisensi
+
+Templat ini memiliki [Lisensi Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0), namun Anda bebas memilih lisensi apa pun untuk buku Anda.

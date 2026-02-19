@@ -1,5 +1,5 @@
 all:
-	asciidoctor-pdf -D build/ -a pdf-themesdir=resources/themes -a pdf-theme=neo-x -r asciidoctor-diagram,asciidoctor-lists book-title.adoc
+	asciidoctor-pdf -D hasil/ -a pdf-themesdir=sumber-daya/tema -a pdf-theme=neo-x -r asciidoctor-diagram,asciidoctor-lists judul-buku.adoc
 
 view:
-	mupdf build/book-title.pdf
+	mupdf hasil/judul-buku.pdf

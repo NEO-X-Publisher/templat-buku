@@ -1,0 +1,88 @@
+= Book Title
+Dr. Bambang Purnomosidi D. P. <bambangpdp@gmail.com>
+v0.0.1-rev-{localdatetime}
+:doctype: book
+:toc:
+:toc-title: Daftar Isi
+:table-caption: Tabel
+:source-highlighter: rouge
+// style:
+// https://github.com/rouge-ruby/rouge/tree/HEAD/lib/rouge/themes
+:rouge-style: igor_pro
+:sectnums:
+:description: This template is only a template. This template is only a template. \
+              This template is only a template. This template is only a template. \
+              This template is only a template. This template is only a template.
+:sourcedir: kode-sumber
+:includedir: isi
+:imagesdir: gambar/isi-buku
+// dir tempat hasil asciidoctor-diagram ditempatkan
+:imagesoutdir: gambar/cache
+:chapter-signifier: Bab
+:figure-caption: Gambar
+:icons: font
+// default: Appendix, diganti dengan "Lampiran"
+:appendix-caption: Lampiran
+
+:listing-caption: Kode Sumber 
+
+:xrefstyle: short 
+
+:sectnums!:
+== Daftar Gambar
+list-of::image[]
+<<<
+
+== Daftar Tabel
+list-of::table[]
+<<<
+
+== Daftar Kode Sumber
+list-of::listing[]
+<<<
+:sectnums:
+
+[preface]
+= Kata Pengantar
+
+Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. Kami ucapkan terima kasih atas terbitnya buku ini. 
+
+= Bagian I: Judul Bagian I
+
+[partintro]
+--
+Deskripsi singkat bagian I dari buku.
+--
+
+include::{includedir}/01-01-judul.adoc[]
+
+include::{includedir}/01-02-judul.adoc[]
+
+= Bagian II: Judul Bagian II
+
+[partintro]
+--
+Deskripsi singkat bagian II dari buku.
+--
+
+include::{includedir}/02-01-judul.adoc[]
+
+include::{includedir}/02-02-judul.adoc[]
+
+[bibliography]
+include::{includedir}/tambahan-00-bibliografi.adoc[]
+
+[appendix]
+include::{includedir}/tambahan-01-lampiran.adoc[]
+
+[appendix]
+include::{includedir}/tambahan-02-lampiran.adoc[]
+
+[glossary]
+= Glosarium
+
+[glossary]
+include::{includedir}/tambahan-03-glosarium.adoc[]
+
+[index]
+== Indeks

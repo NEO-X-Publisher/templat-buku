@@ -1,0 +1,45 @@
+== Bab Berikutnya
+
+=== Sub Bab 1
+
+Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan. Ini hanyalah sebuah pernyataan.
+
+Pada bab ini, saya akan memberikan contoh bagaimana memformat kode sumber (((kode sumber, pemformatan, callout))) menggunakan AsciiDoctor.
+
+
+=== Lihat Kode Sumber Disini
+
+.kode-sumber/01-02/hello-plain/hello.rs
+[source,rust,linenums]
+----
+include::../{sourcedir}/01-02/hello-plain/hello.rs[]
+----
+<1> Penjelasan - callout nomor 1.
+<2> Penjelasan - callout nomor 2.
+
+Untuk kode sumber lain yang tidak berkaitan dengan kode sumber dalam bahasa pemrograman, gunakan ini: (((kode sumber, pemformatan, tampilan shell)))
+
+.rustup
+[source,bash]
+----
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+info: mengunduh penginstal
+...
+...
+----
+
+=== Proses Kompilasi Rust
+
+((Proses kompilasi Rust)) bisa dilihat di <<#gbr-01-01-02>>.
+
+[#gbr-01-01-02]
+.Proses Kompilasi Rust
+[ditaa, target="proses-kompilasi-rust"]
+----
+ +--------+             +---------+   +--------------+   +----------+   +------------+
+ |        |             | Lexing  |   |              |   |          |   |            |
+ | Source | Invocation  | and     |   | AST lowering |   | MIR      |   | Code       |
+ | code   |------------>| parsing |-->| (HIR)        |-->| lowering |-->| generation |
+ |        |             |         |   |              |   |          |   |            |
+ +---+----+             +---------+   +--------------+   +----------+   +------------+
+----

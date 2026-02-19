@@ -1,0 +1,3 @@
+terminologi 1:: terminologi no 1 adalah contoh glosarium
+terminologi 2::
+  terminologi no 2 adalah contoh glosarium
