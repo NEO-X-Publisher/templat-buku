@@ -64,7 +64,7 @@ Semua konten berada di [isi](isi/). Anda harus menyinkronkan semua nama file di 
 
 ### Gambar
 
-* Semua gambar berada di [gambar](gambar/). Tentu saja Anda bebas mengatur cara menempatkan gambar di dalamnya, misalnya Anda dapat menggunakan direktori `xx-yy` dengan `xx` adalah *bagian* dan `yy` adalah *bab* (01-01). Misalnya, jika Anda memiliki gambar di bagian I dan bab 01 - bernama `01-01.png`, maka letakkan `01-01.png` di dalam direktori `01-01` di dalam `gambar`. Lihat isi direktori [gambar](gambar/) untuk contoh.
+* Semua gambar berada di [gambar](gambar/). Tentu saja Anda bebas mengatur cara menempatkan gambar di dalamnya, misalnya Anda dapat menggunakan direktori `xx-yy` dengan `xx` adalah *bagian* dan `yy` adalah *bab* (01-01). Misalnya, jika Anda memiliki gambar di bagian I dan bab 01 - bernama `01-01.png`, maka letakkan `01-01.png` di dalam direktori `01-01` di dalam `gambar`. Lihat isi direktori [gambar](gambar/) untuk contoh. Lokasi dari direktori ini bisa diatur di file [utama](judul-buku.adoc) - dengan mengubah `:imagesdir:`.
 
 * Dalam dokumen Asciidoc, gunakan kode sumber ini:
 
