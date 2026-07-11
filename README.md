@@ -17,10 +17,10 @@ $ gem list --local | grep asciidoctor
 asciidoctor (2.0.26)
 asciidoctor-bibliography (0.11.0)
 asciidoctor-bibtex (0.9.0)
-asciidoctor-diagram (3.1.0)
-asciidoctor-diagram-batik (1.17)
+asciidoctor-diagram (3.2.1)
+asciidoctor-diagram-batik (1.19)
 asciidoctor-diagram-ditaamini (1.0.3)
-asciidoctor-diagram-plantuml (1.2025.3)
+asciidoctor-diagram-plantuml (1.2026.2)
 asciidoctor-epub3 (2.3.0)
 asciidoctor-lists (1.1.2)
 asciidoctor-pdf (2.3.24)
@@ -50,7 +50,7 @@ asciidoctor-anywhere-footnote (1.0.3)
 
 ## Kompilasi ke PDF
 
-Gunakan `Makefile`. Hasilnya akan berada di direktori [hasil](hasil/). Jika ingin menggunakan diagram, saya juga membuat contoh diagram (sebagai kode - menggunakan [ditaa](https://github.com/pepijnve/ditaa)) tetapi ini sepenuhnya opsional. Sila baca [Makefile](Makefile) terlebih dahulu. Jika Anda tidak memerlukan diagram, Anda tidak perlu menggunakan `-r asciidoctor-diagram` di Makefile dan lewati contoh diagram di bawah ini.
+Gunakan `Makefile`. Hasilnya akan berada di direktori [hasil](hasil/). Jika ingin menggunakan diagram, ada contoh diagram (sebagai kode - menggunakan [ditaa](https://github.com/pepijnve/ditaa)) tetapi ini sepenuhnya opsional. Sila baca [Makefile](Makefile) terlebih dahulu. Jika Anda tidak memerlukan diagram, Anda tidak perlu menggunakan `-r asciidoctor-diagram` di Makefile dan lewati contoh diagram di bawah ini.
 
 ```bash
 $ make
@@ -196,11 +196,12 @@ Hasilnya adalah:
 
 ```bash
 bpdp@Neo-X$ ls -la images/cache/
-total 12
-drwxr-xr-x 2 bpdp bpdp 42 Dec 25 05:35 .
 
-drwxr-xr-x 5 bpdp bpdp 82 Dec 25 05:35 ..
--rw-r--r-- 1 bpdp bpdp 9288 Dec 25 05:35 proses-kompilasi-rust.png
+$ ls -la
+total 12
+drwxr-xr-x 2 bpdp bpdp   39 Jul 12 06:41 .
+drwxr-xr-x 6 bpdp bpdp   84 Jul 12 06:41 ..
+-rw-r--r-- 1 bpdp bpdp 9517 Jul 12 06:41 proses-kompilasi-rust.png
 bpdp@Neo-X$
 $
 ```
