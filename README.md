@@ -350,7 +350,7 @@ Kita akan menggunakan penomoran normal, dimulai dari halaman 5 (setelah daftar i
 Jika ingin mengubah tata letak (font, logo, dll):
 
 1. Lihat `Makefile` sebagai referensi perintah shell yang digunakan untuk membuat file pdf. Parameter yang digunakan antara lain adalah `pdf-theme`.
-2. Tema berada di `sumber-data/tema/` dan menggunakan pola nama file ini (lihat juga `Makefile`):
+2. Tema berada di `sumber-yata/tema/` dan menggunakan pola nama file ini (lihat juga `Makefile`):
 
 *nama-tema-pdf-di-Makefile*-theme.yml
 
