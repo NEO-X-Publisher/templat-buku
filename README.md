@@ -347,10 +347,12 @@ Kita akan menggunakan penomoran normal, dimulai dari halaman 5 (setelah daftar i
 
 ## Lebih Lanjut
 
+### Tema 
+
 Jika ingin mengubah tata letak (font, logo, dll):
 
 1. Lihat `Makefile` sebagai referensi perintah shell yang digunakan untuk membuat file pdf. Parameter yang digunakan antara lain adalah `pdf-theme`.
-2. Tema berada di `sumber-yata/tema/` dan menggunakan pola nama file ini (lihat juga `Makefile`):
+2. Tema berada di `sumber-daya/tema/` dan menggunakan pola nama file ini (lihat juga `Makefile`):
 
 *nama-tema-pdf-di-Makefile*-theme.yml
 
@@ -359,6 +361,26 @@ Contoh:
 *neo-x*-theme.yaml
 
 3. Lihat [manual pembuatan tema](https://docs.asciidoctor.org/pdf-converter/latest/theme/) untuk informasi lebih lanjut tentang membuat tema Anda sendiri.
+
+### Sampul / *Cover* Buku 
+
+Sampul buku ditetapkan di file `sumber-daya/tema/neo-x-theme.yaml` (atau sesuai nama yang telah ditetapkan). Lihat pada bagian berikut:
+
+```asciidoc
+...
+...
+cover:
+  front-image: image:{docimagesdir}/cover.pdf[]
+  fit: cover
+```
+
+`docimagesdir` sesuai dengan nama direktori untuk gambar yang ada di file utama (`judul-buku.adoc`):
+
+```asciidoc
+imagesdir: gambar/isi-buku
+```
+
+Aturlah sesuai dengan cover yang diinginkan.
 
 ## Lisensi
 
